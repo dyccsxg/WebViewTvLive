@@ -28,7 +28,9 @@ object PlaylistManager {
     private val gson = GsonBuilder().setPrettyPrinting().create()!!
     private val jsonTypeToken = object : TypeToken<List<Channel>>() {}
     private val playlistFile = File(application.filesDir, "playlist.json")
-    private val builtInPlaylists = listOf<Pair<String, String>>()
+    private val builtInPlaylists = listOf(
+        Pair("我的电视", "https://gitee.com/usm/notes/raw/master/tv/webview-tv-list.json")
+    )
 
     var onPlaylistChange: ((Playlist) -> Unit)? = null
     var onUpdatePlaylistJobStateChange: ((Boolean) -> Unit)? = null

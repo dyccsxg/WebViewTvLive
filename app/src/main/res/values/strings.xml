@@ -1,5 +1,5 @@
 <resources>
-	<string name="app_name">WebView 电视</string>
+	<string name="app_name">网页电视</string>
 	
 	<string name="toast_reload_channel">为您重新加载频道</string>
 	<string name="unknown">未知</string>

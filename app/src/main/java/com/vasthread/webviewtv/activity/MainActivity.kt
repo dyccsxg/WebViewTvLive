@@ -2,6 +2,8 @@ package com.vasthread.webviewtv.activity
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.AttributeSet
 import android.view.KeyEvent
 import android.view.MotionEvent
@@ -51,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var channelSettingsView: ChannelSettingsView
     private lateinit var appSettingsView: AppSettingsView
 
+    private var doubleBackToExitPressedOnce = false
     private var lastChannel: Channel? = null
 
     private var uiMode = UiMode.STANDARD
@@ -181,6 +184,15 @@ class MainActivity : AppCompatActivity() {
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         uiMode = if (uiMode == UiMode.STANDARD) UiMode.EXIT_CONFIRM else UiMode.STANDARD
+        if (doubleBackToExitPressedOnce) {
+            android.os.Process.killProcess(android.os.Process.myPid())
+            return
+        }
+
+        doubleBackToExitPressedOnce = true
+        Handler(Looper.getMainLooper()).postDelayed({
+            doubleBackToExitPressedOnce = false
+        }, 2000)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
