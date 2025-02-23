@@ -243,6 +243,8 @@ class MainActivity : AppCompatActivity() {
                         KeyEvent.KEYCODE_DPAD_DOWN -> playlistView.nextChannel()
                         KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_DPAD_CENTER -> uiMode = UiMode.CHANNELS
                         KeyEvent.KEYCODE_MENU -> uiMode = UiMode.CHANNEL_SETTINGS
+                        KeyEvent.KEYCODE_DPAD_LEFT -> prevChannelSource()
+                        KeyEvent.KEYCODE_DPAD_RIGHT -> nextChannelSource()
                     }
                 }
                 return true
@@ -268,4 +270,25 @@ class MainActivity : AppCompatActivity() {
         playerView.postDelayed(backToStandardModeAction, OPERATION_TIMEOUT)
     }
 
+    private fun prevChannelSource() {
+        val channel = playerView.channel ?: return
+        val currentIndex = SettingsManager.getChannelLastSourceIndex(channel.name)
+        var prevIndex = currentIndex - 1
+        if (prevIndex < 0) {
+            prevIndex = channel.urls.size - 1
+        }
+        SettingsManager.setChannelLastSourceIndex(channel.name, prevIndex)
+        playerView.refreshChannel()
+    }
+
+    private fun nextChannelSource() {
+        val channel = playerView.channel ?: return
+        val currentIndex = SettingsManager.getChannelLastSourceIndex(channel.name)
+        var nextIndex = currentIndex + 1
+        if (nextIndex >= channel.urls.size) {
+            nextIndex = 0
+        }
+        SettingsManager.setChannelLastSourceIndex(channel.name, nextIndex)
+        playerView.refreshChannel()
+    }
 }

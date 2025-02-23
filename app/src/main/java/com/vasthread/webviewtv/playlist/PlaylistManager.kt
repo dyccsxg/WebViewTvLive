@@ -101,7 +101,7 @@ object PlaylistManager {
         return Playlist.createFromAllChannels("default", channels)
     }
 
-    private fun loadBuiltInPlaylist() = createPlaylistFromJson("[{\"name\":\"CCTV-6 电影\",\"groupName\":\"我的电视\",\"urls\":[\"https://tv.cctv.com/live/cctv6/\"]},{\"name\":\"CCTV-8 电视剧\",\"groupName\":\"我的电视\",\"urls\":[\"https://tv.cctv.com/live/cctv8/\"]}]")
+    private fun loadBuiltInPlaylist() = createPlaylistFromJson("[{\"name\":\"CCTV-6 电影\",\"group\":\"我的电视\",\"urls\":[\"https://tv.cctv.com/live/cctv6/\"]},{\"name\":\"CCTV-8 电视剧\",\"group\":\"我的电视\",\"urls\":[\"https://tv.cctv.com/live/cctv8/\"]}]")
 
     fun loadPlaylist(): Playlist {
         return try {
