@@ -254,15 +254,15 @@ class WebpageAdapterWebView @JvmOverloads constructor(
             setVideoSize(0, 0)
             if (requestedUrl == url) {
                 settings.apply {
-                    loadsImagesAutomatically = false
-                    blockNetworkImage = true
+                    loadsImagesAutomatically = true
+                    blockNetworkImage = false
                     userAgentString = WebpageAdapterManager.get(url).userAgent()
                 }
                 chromeClient.apply {
                     videoRatio = RATIO_16_9
                 }
                 settingsExtension?.apply {
-                    setPicModel(IX5WebSettingsExtension.PicModel_NoPic)
+                    setPicModel(IX5WebSettingsExtension.PicModel_NORMAL)
                 }
                 disablePlayCheck()
                 chromeClient.markNewPage()
