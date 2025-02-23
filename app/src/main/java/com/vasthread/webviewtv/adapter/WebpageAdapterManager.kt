@@ -23,6 +23,7 @@ object WebpageAdapterManager {
         TdmWebpageAdapter(),
         JlnWebpageAdapter(),
         YangshipinWebpageAdapter(),
+        M1905WebpageAdapter(),
         CommonWebpageAdapter(),
     )
 
