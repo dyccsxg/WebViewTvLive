@@ -3,12 +3,12 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
+	android:layout_width="wrap_content"
 	android:layout_height="match_parent"
 	tools:parentTag="android.widget.LinearLayout">
 
 	<LinearLayout
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="50dp"
 		android:gravity="center"
 		android:orientation="horizontal"
@@ -34,7 +34,7 @@
 			android:gravity="center"
 			android:singleLine="true"
 			android:text="未加载列表"
-			android:textSize="17sp" />
+			android:textSize="11sp" />
 
 		<Button
 			android:id="@+id/btnPageDown"
@@ -66,10 +66,10 @@
 
 	<androidx.recyclerview.widget.RecyclerView
 		android:id="@+id/rvChannels"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="match_parent"
-		android:paddingLeft="5dp"
-		android:paddingRight="5dp"
+		android:paddingLeft="2dp"
+		android:paddingRight="2dp"
 		android:scrollbars="vertical"
 		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

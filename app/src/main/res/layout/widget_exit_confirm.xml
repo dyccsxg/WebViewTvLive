@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_width="wrap_content"
+	android:layout_height="match_parent" >
 
 	<ImageView
-		android:layout_width="100dp"
-		android:layout_height="100dp"
+		android:layout_marginTop="5dp"
+		android:layout_width="50dp"
+		android:layout_height="50dp"
 		android:background="@drawable/ic_launcher" />
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
-		android:text="@string/app_name" />
+		android:layout_marginTop="5dp"
+		android:text="@string/app_name"
+		android:textSize="11sp" />
 
 	<TextView
 		android:id="@+id/tvAppInfo"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
 		android:gravity="center"
-		android:textSize="12sp" />
+		android:textSize="11sp" />
 
 	<TextView
 		android:id="@+id/tvSystemInfo"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="30dp"
 		android:gravity="center"
-		android:textSize="12sp" />
+		android:textSize="11sp" />
 
 	<Button
 		android:id="@+id/btnSettings"
+		android:layout_marginTop="5dp"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_height="20dp"
 		android:background="@drawable/bg_item"
-		android:text="设置" />
+		android:text="设置"
+		android:textSize="11sp" />
 
 	<Button
 		android:id="@+id/btnExit"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_height="20dp"
 		android:background="@drawable/bg_item"
-		android:text="退出" />
+		android:text="退出"
+		android:textSize="11sp" />
 
 </merge>

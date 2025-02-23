@@ -19,14 +19,16 @@
 
 		<com.vasthread.webviewtv.widget.PlaylistView
 			android:id="@+id/playlist"
-			android:layout_width="275dp"
+			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
 			android:visibility="gone" />
 
 		<com.vasthread.webviewtv.widget.ExitConfirmView
 			android:id="@+id/exitConfirm"
-			android:layout_width="200dp"
+			android:layout_width="wrap_content"
 			android:layout_height="match_parent"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
 			android:visibility="gone" />
 
 		<com.vasthread.webviewtv.widget.ChannelSettingsView
@@ -38,7 +40,7 @@
 
 		<com.vasthread.webviewtv.widget.AppSettingsView
 			android:id="@+id/appSettings"
-			android:layout_width="400dp"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
 			android:visibility="gone" />
