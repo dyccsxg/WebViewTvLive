@@ -24,10 +24,10 @@
 
 	<com.vasthread.webviewtv.widget.ChannelBarView
 		android:id="@+id/channelBarView"
-		android:layout_width="500dp"
+		android:layout_width="200dp"
 		android:layout_height="wrap_content"
 		android:layout_gravity="bottom|center"
-		android:layout_marginBottom="30dp"
+		android:layout_marginBottom="10dp"
 		android:visibility="gone" />
 
 </merge>

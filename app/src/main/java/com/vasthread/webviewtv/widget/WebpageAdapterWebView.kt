@@ -267,7 +267,7 @@ class WebpageAdapterWebView @JvmOverloads constructor(
                 disablePlayCheck()
                 chromeClient.markNewPage()
                 Log.i(TAG, "Load url $url")
-                super.loadUrl(url)
+                super.loadUrl(url, mapOf("X-Requested-With" to ""))
             } else {
                 Log.i(TAG, "New url requested, ignore.")
             }
