@@ -49,7 +49,7 @@ class WebpageAdapterWebView @JvmOverloads constructor(
     companion object {
         private const val TAG = "WebpageAdapterWebView"
         const val URL_BLANK = "about:blank"
-        private const val SHOW_WAITING_VIEW_DELAY = 3000L
+        private const val SHOW_WAITING_VIEW_DELAY = 10000L
         private const val MAX_ZOOM_OUT_LEVEL = 3
         private const val CHECK_PAGE_LOADING_INTERVAL = 50L
         private const val BLANK_PAGE_WAIT = 800L
